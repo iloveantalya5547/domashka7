@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<BankPayment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Sender>Nikita</Sender>
+  <Receiver>Paul</Receiver>
+  <Sum>300</Sum>
+  <Payment>в оплату долга</Payment>
+</BankPayment>

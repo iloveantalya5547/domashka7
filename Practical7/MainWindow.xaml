@@ -1,0 +1,108 @@
+﻿<Window x:Class="Practical7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practical7"
+        mc:Ignorable="d"
+        Title="Bank payment request" Height="450" Width="800">
+    <Window.Resources>
+        <Storyboard x:Key="OpenMenu">
+            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="-150,0,0,0" To="0,0,0,0" DecelerationRatio="0.9" Duration="0:0:0.5"/>
+        </Storyboard>
+
+        <Storyboard x:Key="CloseMenu">
+            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,0,0" To="-150,0,0,0" DecelerationRatio="0.9" Duration="0:0:0.5"/>
+        </Storyboard>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Name="txtSender" Text="{Binding Sender}" Grid.Row="0" Height="30" Width="500" />
+        <TextBlock Text="Відправник:" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Margin="10"/>
+        <TextBox Name="txtReceiver" Text="{Binding Receiver}" Grid.Row="1" Height="30" Width="500" />
+        <TextBlock Text="Отримувач:" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Margin="10"/>
+        <TextBox Name="txtSum" Text="{Binding Sum}" Grid.Row="2" Height="30" Width="500" />
+        <TextBlock Text="Сума:" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Margin="10"/>
+        <TextBox x:Name="txtPayment" Text="{Binding Payment}" Grid.Row="3" Height="30" Width="500"/>
+        <TextBlock Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="16" FontWeight="Bold" Margin="10">
+            Призначення <LineBreak />
+            платежу:
+        </TextBlock>
+        <Button Grid.Row="4" Width="100" Height="35" Content="Зберегти..." FontSize="14" HorizontalAlignment="Left" Margin="20" FontWeight="Bold" Click="btnsavedata_click" />
+        <Button Grid.Row="4" Width="100" Height="35" Content="Завантажити..." FontSize="14" HorizontalAlignment="Right" Margin="20" FontWeight="Bold" Click="btnloaddata_click" />
+
+        <StackPanel Panel.ZIndex="2" Name="LeftMenu" Orientation="Horizontal" HorizontalAlignment="Left" Margin='-150,0,0,0' Grid.RowSpan="3">
+            <Border BorderBrush="#AF1719" BorderThickness="1" Width="150" Background="GhostWhite">
+                <Grid>
+                    <Button Name="btnclose" Height="40" HorizontalAlignment="Stretch" VerticalAlignment="Top" Content="Close" FontWeight="SemiBold" HorizontalContentAlignment="Left" BorderBrush="AliceBlue" Margin="0,198,0,0"></Button>
+                    <ListBox Name="lbFormats" Margin="0,10,0,45">
+                        <ListBoxItem Background="LightGray" FontSize="16" FontWeight="Bold">Формати:</ListBoxItem>
+                        <ToggleButton Name="btnSelectbin"  Width="80" Checked="BinChecked" Content="Select bin" >
+                            <ToggleButton.Style>
+                                <Style TargetType="{x:Type ToggleButton}">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="ToggleButton">
+                                                <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                                Background="{TemplateBinding Background}">
+                                                    <ContentPresenter HorizontalAlignment="Center"                  
+                                              VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsChecked" Value="True">
+                                            <Setter Property="Background" Value="Red" />
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </ToggleButton.Style>
+                        </ToggleButton>
+                        <ToggleButton x:Name="btnSelectxml" Width="80" Content="Select xml" Checked="XmlChecked">
+                            <ToggleButton.Style>
+                            <Style TargetType="{x:Type ToggleButton}">
+                                    <Setter Property="Template">
+                                        <Setter.Value>
+                                            <ControlTemplate TargetType="ToggleButton">
+                                                <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                                Background="{TemplateBinding Background}">
+                                                    <ContentPresenter HorizontalAlignment="Center"                  
+                                              VerticalAlignment="Center"/>
+                                                </Border>
+                                            </ControlTemplate>
+                                        </Setter.Value>
+                                    </Setter>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsChecked" Value="True">
+                                            <Setter Property="Background" Value="Red" />
+                                        </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                            </ToggleButton.Style>
+                        </ToggleButton>
+                    </ListBox>
+                </Grid>
+            </Border>
+            <StackPanel Orientation="Vertical">
+                <Grid Margin="0,10,0,0" RenderTransformOrigin="0.536,-1.731">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="17*"/>
+                        <ColumnDefinition Width="3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btnshow" Width="20" Height="20" BorderThickness="0" Content="➤" ToolTip="Open Menu" VerticalAlignment="Top" Grid.ColumnSpan="2"></Button>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+
+
+    </Grid>
+</Window>

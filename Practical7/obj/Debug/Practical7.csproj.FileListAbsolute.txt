@@ -1,0 +1,15 @@
+C:\Users\Павел\Source\Repos\Practical7\Practical7\bin\Debug\Practical7.exe.config
+C:\Users\Павел\Source\Repos\Practical7\Practical7\bin\Debug\Practical7.exe
+C:\Users\Павел\Source\Repos\Practical7\Practical7\bin\Debug\Practical7.pdb
+C:\Users\Павел\Source\Repos\Practical7\Practical7\obj\Debug\Practical7.csprojAssemblyReference.cache
+C:\Users\Павел\Source\Repos\Practical7\Practical7\obj\Debug\MainWindow.g.cs
+C:\Users\Павел\Source\Repos\Practical7\Practical7\obj\Debug\App.g.cs
+C:\Users\Павел\Source\Repos\Practical7\Practical7\obj\Debug\Practical7_MarkupCompile.cache
+C:\Users\Павел\Source\Repos\Practical7\Practical7\obj\Debug\Practical7_MarkupCompile.lref
+C:\Users\Павел\Source\Repos\Practical7\Practical7\obj\Debug\MainWindow.baml
+C:\Users\Павел\Source\Repos\Practical7\Practical7\obj\Debug\Practical7.g.resources
+C:\Users\Павел\Source\Repos\Practical7\Practical7\obj\Debug\Practical7.Properties.Resources.resources
+C:\Users\Павел\Source\Repos\Practical7\Practical7\obj\Debug\Practical7.csproj.GenerateResource.cache
+C:\Users\Павел\Source\Repos\Practical7\Practical7\obj\Debug\Practical7.csproj.CoreCompileInputs.cache
+C:\Users\Павел\Source\Repos\Practical7\Practical7\obj\Debug\Practical7.exe
+C:\Users\Павел\Source\Repos\Practical7\Practical7\obj\Debug\Practical7.pdb
